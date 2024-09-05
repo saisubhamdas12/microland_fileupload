@@ -10,7 +10,7 @@ class LoginForm(AuthenticationForm):
 class FileUploadForm(forms.ModelForm):
     class Meta:
         model = FileUpload
-        fields = ['file_name']  # Only include editable fields (exclude 'upload_time' and 'user')
+        fields = ['file_name']  
         widgets = {
             'file_name': forms.FileInput(attrs={'class': 'form-control-file'}),
         }
