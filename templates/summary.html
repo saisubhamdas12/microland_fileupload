@@ -1,0 +1,15 @@
+<h2>Upload Summary</h2>
+<table>
+    <tr>
+        <th>Username</th>
+        <th>File Name</th>
+        <th>Time of Upload</th>
+    </tr>
+    {% for upload in uploads %}
+    <tr>
+        <td>{{ request.user.username }}</td>
+        <td>{{ upload.file_name }}</td>
+        <td>{{ upload.upload_time }}</td>
+    </tr>
+    {% endfor %}
+</table>
